@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bonos · Pintor Pro</title>
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=Archivo+Narrow:wght@700&display=swap">
+<style>
+:root{--bg:#eef0ec;--card:#fff;--ink:#1d2a33;--muted:#5f6d74;--line:#d6dbd6;--tape:#f2c230;--bar:#1d2a33}
+@media (prefers-color-scheme: dark){:root{--bg:#12181c;--card:#1b242a;--ink:#e9eef0;--muted:#9aa8ae;--line:#2c373e;--bar:#0b1014;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 Archivo,system-ui,sans-serif}
+header{position:sticky;top:0;background:var(--bar);color:#fff;padding:calc(12px + env(safe-area-inset-top,0px)) 16px 12px;display:flex;gap:12px;align-items:center;z-index:2}
+header a{color:var(--tape);text-decoration:none;font-weight:600}
+header b{font:700 20px "Archivo Narrow",sans-serif}
+main{max-width:760px;margin:0 auto;padding:16px}
+nav.idx{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:18px}
+nav.idx a{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;color:var(--ink);text-decoration:none;font-weight:600;font-size:14.5px}
+section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:16px}
+h2{font:700 22px/1.15 "Archivo Narrow",sans-serif;text-transform:uppercase;margin:0 0 4px}
+h2 small{display:block;font:600 12px Archivo;color:var(--muted);letter-spacing:.5px}
+h3{font-size:16px;margin:16px 0 6px}
+ul.chk{list-style:none;padding:0;margin:0} ul.chk li{padding:7px 0 7px 30px;position:relative;border-bottom:1px dashed var(--line)}
+ul.chk li::before{content:"";position:absolute;left:0;top:9px;width:18px;height:18px;border:2px solid var(--ink);border-radius:4px}
+ol li+li{margin-top:5px}
+table{width:100%;border-collapse:collapse;font-size:14.5px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12.5px;text-transform:uppercase;color:var(--muted)}
+.tbl{overflow-x:auto}
+.note{font-size:13.5px;color:var(--muted)}
+.box{border-left:5px solid var(--tape);background:var(--bg);padding:12px 14px;border-radius:8px;margin:10px 0}
+.contrato{font-family:Georgia,serif;font-size:15px;background:var(--bg);padding:16px;border-radius:10px;white-space:pre-wrap}
+button{font:700 15px Archivo;border:0;border-radius:10px;padding:12px 16px;background:var(--tape);color:#1d2a33;cursor:pointer;margin-top:10px}
+</style>
+</head>
+<body>
+<header><a href="./">← App</a><b>Tus 4 bonos</b></header>
+<main>
+<nav class="idx">
+  <a href="#checklist">1 · Checklist de visita técnica</a>
+  <a href="#medicion">2 · Guía de medición rápida</a>
+  <a href="#contrato">3 · Plantilla de contrato</a>
+  <a href="#precios">4 · Tabla de precios</a>
+</nav>
+
+<section id="checklist">
+  <h2><small>BONO 1</small>Checklist de visita técnica</h2>
+  <p>Repásalo en la casa del cliente, antes de dar el precio. Cada punto que encuentres es trabajo que se cobra.</p>
+  <h3>Paredes y techos</h3>
+  <ul class="chk">
+    <li>¿Hay manchas de humedad, moho o salitre? Toca la pared: ¿está fría o húmeda?</li>
+    <li>¿La pintura se pela, hace ampollas o se desprende en láminas?</li>
+    <li>Pasa la mano: ¿deja polvo blanco (tizado) o se desgrana el revoque?</li>
+    <li>¿Hay fisuras finas, grietas o fisuras en las uniones de pared y techo?</li>
+    <li>¿Las juntas o los tornillos del tablaroca/drywall se marcan?</li>
+    <li>Raspa un rincón: ¿la pintura vieja es al agua, esmalte o cal?</li>
+    <li>¿El color nuevo es mucho más claro u oscuro que el actual? (más manos)</li>
+  </ul>
+  <h3>Madera, metal y exterior</h3>
+  <ul class="chk">
+    <li>Puertas, marcos y rejas: ¿óxido, barniz pelado, madera gris?</li>
+    <li>Fachada: ¿algas, suciedad, pintura decolorada por el sol?</li>
+    <li>¿Hace falta andamio, escalera alta o trabajo en altura?</li>
+  </ul>
+  <h3>Logística</h3>
+  <ul class="chk">
+    <li>¿Hay muebles para mover o cubrir? ¿Quién los mueve?</li>
+    <li>¿La casa está habitada? (más tiempo de protección y limpieza)</li>
+    <li>¿Hay agua, luz y lugar para lavar rodillos?</li>
+    <li>¿Distancia y estacionamiento? (suma traslado)</li>
+    <li>¿Fecha límite del cliente? (si es urgente, se cobra más)</li>
+  </ul>
+  <h3>Antes de irte</h3>
+  <ul class="chk">
+    <li>Toma fotos de cada problema: te sirven para explicarle al cliente y para el presupuesto.</li>
+    <li>Arma el presupuesto en la app ahí mismo y envíalo por WhatsApp antes de salir.</li>
+  </ul>
+</section>
+
+<section id="medicion">
+  <h2><small>BONO 2</small>Guía de medición rápida</h2>
+  <h3>Paredes de un ambiente</h3>
+  <ol>
+    <li>Mide el largo de cada pared y súmalos: eso es el <b>ancho total</b> (perímetro).</li>
+    <li>Mide el <b>alto</b> del piso al techo.</li>
+    <li>Ancho total × alto = superficie bruta.</li>
+    <li>Resta puertas y ventanas: puerta común ≈ 1,6 m² (17 ft²); ventana común ≈ 1,5 m² (16 ft²).</li>
+  </ol>
+  <div class="box"><b>Ejemplo:</b> sala de 4 × 4 m y 2,6 m de alto → perímetro 16 m × 2,6 = 41,6 m² − 1 puerta − 1 ventana = <b>38,5 m²</b>.</div>
+  <h3>Techos</h3>
+  <p>Largo × ancho del piso. Si el techo tiene vigas o molduras, suma un 10 %.</p>
+  <h3>Fachadas</h3>
+  <p>Ancho de la fachada × alto hasta el alero. En frentes con relieve o texturas, suma un 15 % de pintura.</p>
+  <h3>Cuánta pintura</h3>
+  <p>Superficie × manos ÷ rendimiento. Rendimiento típico: 10 m² por litro por mano (≈ 350–400 ft² por galón). Sobre revoque nuevo o muy poroso, calcula 7–8 m²/L.</p>
+  <h3>Errores que cuestan plata</h3>
+  <ul>
+    <li>Olvidar el sellador o la primera mano en superficies nuevas.</li>
+    <li>No contar marcos, zócalos y rejas: se cobran aparte (por metro lineal o por pieza).</li>
+    <li>Medir “a ojo” en lugar de usar cinta o medidor láser.</li>
+  </ul>
+</section>
+
+<section id="contrato">
+  <h2><small>BONO 3</small>Plantilla de contrato simple</h2>
+  <p class="note">Cópiala, completa los datos y mándala junto con el presupuesto. Es un modelo general: ajústalo a las reglas de tu país.</p>
+  <div class="contrato" id="txtContrato">ACUERDO DE TRABAJO DE PINTURA
+
+Entre: [TU NOMBRE O EMPRESA], teléfono [TU TELÉFONO] (el Pintor)
+y: [NOMBRE DEL CLIENTE], dirección de la obra [DIRECCIÓN] (el Cliente).
+
+1. TRABAJO. El Pintor realizará los trabajos detallados en el presupuesto N.º [___] del [FECHA], que forma parte de este acuerdo. Cualquier trabajo no incluido en el presupuesto se cotiza aparte, por escrito, antes de hacerse.
+
+2. PRECIO Y PAGO. Precio total: [MONTO]. Anticipo: [__] % al confirmar (para materiales). Saldo: al terminar y revisar el trabajo juntos.
+
+3. PLAZOS. Inicio: [FECHA]. Duración estimada: [__] días hábiles. Lluvia, humedad excesiva o cambios pedidos por el Cliente pueden mover la fecha de entrega.
+
+4. PREPARACIÓN. Si al trabajar aparecen problemas ocultos (humedad, revoque flojo, grietas) que no se veían en la visita, el Pintor avisará con fotos y propondrá el tratamiento y su costo antes de seguir.
+
+5. MATERIALES. [Los pone el Pintor / Los pone el Cliente]. Marca y tipo de pintura: [______]. Colores elegidos por el Cliente: [______].
+
+6. LIMPIEZA Y PROTECCIÓN. El Pintor protege pisos y muebles y entrega el lugar limpio. Mover muebles pesados corre por cuenta de [______].
+
+7. GARANTÍA. El Pintor garantiza el trabajo por [__] meses contra desprendimientos por mala aplicación. No cubre daños por humedad estructural no tratada, golpes o mal uso.
+
+8. CONFORMIDAD. Al terminar, ambas partes revisan el trabajo. El saldo se paga el día de la entrega.
+
+Firma del Pintor: ____________    Firma del Cliente: ____________
+Fecha: ____________</div>
+  <button id="copiar">Copiar contrato</button>
+</section>
+
+<section id="precios">
+  <h2><small>BONO 4</small>Tabla de precios de referencia</h2>
+  <p class="note">Rangos orientativos de mano de obra (sin materiales) para que no cobres de menos. Ajusta a tu zona, tu experiencia y lo que cobran los buenos pintores cerca de ti.</p>
+  <h3>Cómo armar tu precio por metro (o pie)</h3>
+  <div class="box">Lo que quieres ganar por día ÷ metros que pintas por día = <b>tu precio mínimo por m²</b>.<br>Ej.: quieres ganar 1.500 por día y pintas 40 m² por día (2 manos) → mínimo 37,50 por m².</div>
+  <h3>Recargos típicos sobre tu precio base</h3>
+  <div class="tbl"><table>
+    <tr><th>Trabajo</th><th>Recargo</th></tr>
+    <tr><td>Techos</td><td>+20 a 30 %</td></tr>
+    <tr><td>Cambio de color fuerte (oscuro → claro)</td><td>+1 mano</td></tr>
+    <tr><td>Antimoho / fungicida</td><td>+30 a 40 %</td></tr>
+    <tr><td>Salitre / humedad (tratamiento)</td><td>+50 a 120 %</td></tr>
+    <tr><td>Masillar fisuras y lijar</td><td>+30 a 60 %</td></tr>
+    <tr><td>Altura (andamio, más de 3 m)</td><td>+25 a 50 %</td></tr>
+    <tr><td>Casa habitada con muebles</td><td>+10 a 20 %</td></tr>
+    <tr><td>Urgente (fin de semana o plazo corto)</td><td>+20 a 30 %</td></tr>
+  </table></div>
+  <h3>Rangos de mercado (interior, 2 manos)</h3>
+  <div class="tbl"><table>
+    <tr><th>País</th><th>Mano de obra</th></tr>
+    <tr><td>Estados Unidos</td><td>US$ 1,5 – 4 por ft²</td></tr>
+    <tr><td>México</td><td>MX$ 30 – 100 por m²</td></tr>
+    <tr><td>España</td><td>€ 5 – 12 por m²</td></tr>
+    <tr><td>Otros países</td><td>usa la fórmula de arriba con tu costo de vida</td></tr>
+  </table></div>
+  <p class="note">Fuentes: rangos publicados en portales de presupuestos de cada país (2025–2026). Son una guía, no un precio obligatorio.</p>
+</section>
+</main>
+<script>
+document.getElementById("copiar").onclick = async e => {
+  const t = document.getElementById("txtContrato").innerText;
+  try { await navigator.clipboard.writeText(t); e.target.textContent = "¡Copiado!"; }
+  catch (_) { const r = document.createRange(); r.selectNodeContents(document.getElementById("txtContrato")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+};
+</script>
+</body>
+</html>

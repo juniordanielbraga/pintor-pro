@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1d2a33">
+<title>Pintor Pro</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=Archivo+Narrow:wght@600;700&display=swap">
+<link rel="stylesheet" href="style.css?v=3">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="tape"></span><b id="appName">Pintor Pro</b></div>
+  <span class="topr"><a class="bon" href="bonos.html">🎁 Bonos</a><button id="btnInstall" class="ghost" hidden></button></span>
+</header>
+
+<main>
+  <!-- FICHAS -->
+  <section id="v-fichas" class="view">
+    <div class="search"><input id="q" type="search" autocomplete="off"></div>
+    <div id="chips" class="chips"></div>
+    <div id="grid" class="grid"></div>
+  </section>
+
+  <!-- DETALLE -->
+  <section id="v-ficha" class="view" hidden>
+    <button class="back" id="backFicha"></button>
+    <article id="ficha"></article>
+  </section>
+
+  <!-- PRESUPUESTO -->
+  <section id="v-pres" class="view" hidden>
+    <div class="card">
+      <h2 data-t="cliente"></h2>
+      <label><span data-t="nombreCliente"></span><input id="c-n"></label>
+      <label><span data-t="direccion"></span><input id="c-dir"></label>
+      <label><span data-t="telCliente"></span><input id="c-tel" inputmode="tel"></label>
+    </div>
+
+    <div class="card">
+      <h2 data-t="ambientes"></h2>
+      <div id="ambs"></div>
+      <button class="add" id="addAmb"></button>
+    </div>
+
+    <div class="card">
+      <h2 data-t="trats"></h2>
+      <div id="trats"></div>
+    </div>
+
+    <div class="card two">
+      <div>
+        <h2 data-t="pintura"></h2>
+        <label><span id="lblRend"></span><input id="p-rend" type="number" inputmode="decimal" step="any"></label>
+        <label><span id="lblPrecioP"></span><input id="p-precio" type="number" inputmode="decimal" step="any"></label>
+        <label><span data-t="margen"></span><input id="p-margen" type="number" inputmode="decimal" step="any"></label>
+      </div>
+      <div>
+        <h2 data-t="manoObra"></h2>
+        <label><span id="lblMO"></span><input id="mo-precio" type="number" inputmode="decimal" step="any"></label>
+        <label><span id="lblProd"></span><input id="mo-prod" type="number" inputmode="decimal" step="any"></label>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2 data-t="extras"></h2>
+      <div id="extras"></div>
+      <button class="add" id="addExtra"></button>
+      <div class="row3">
+        <label><span data-t="descuento"></span><input id="desc" type="number" inputmode="decimal" step="any" placeholder="%"></label>
+        <label><span data-t="impuesto"></span><input id="imp" type="number" inputmode="decimal" step="any" placeholder="%"></label>
+      </div>
+      <label><span data-t="notas"></span><textarea id="notas" rows="2"></textarea></label>
+    </div>
+
+    <div class="card total" id="resumen"></div>
+
+    <div class="actions">
+      <button class="primary" id="btnPdf"></button>
+      <button class="wa" id="btnWa"></button>
+      <button class="ghost" id="btnSave"></button>
+      <button class="ghost" id="btnNew"></button>
+    </div>
+  </section>
+
+  <!-- GUARDADOS -->
+  <section id="v-hist" class="view" hidden><div id="hist"></div></section>
+
+  <!-- AJUSTES -->
+  <section id="v-ajustes" class="view" hidden>
+    <div class="card">
+      <h2 data-t="negocio"></h2>
+      <label><span data-t="nombreNegocio"></span><input id="s-neg"></label>
+      <label><span data-t="telNegocio"></span><input id="s-tel" inputmode="tel"></label>
+      <label><span data-t="logo"></span><input id="s-logo" type="file" accept="image/*"></label>
+      <img id="logoPrev" alt="" hidden>
+    </div>
+    <div class="card">
+      <label><span data-t="idioma"></span><select id="s-lang"><option value="es">Español</option><option value="en">English</option></select></label>
+      <label><span data-t="unidades"></span><select id="s-units"><option value="M" data-t="metrico"></option><option value="I" data-t="imperial"></option></select></label>
+      <label><span data-t="moneda"></span><input id="s-cur" maxlength="4"></label>
+      <label><span data-t="validez"></span><input id="s-val" type="number" inputmode="numeric"></label>
+    </div>
+  </section>
+</main>
+
+<nav class="tabs">
+  <button data-v="fichas" class="on"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z M8 9h8 M8 13h5"/></svg><span data-t="tabFichas"></span></button>
+  <button data-v="pres"><svg viewBox="0 0 24 24"><path d="M6 3h9l3 3v15H6z M9 11h6 M9 15h6 M9 7h3"/></svg><span data-t="tabPres"></span></button>
+  <button data-v="hist"><svg viewBox="0 0 24 24"><path d="M5 4h14v16l-7-4-7 4z"/></svg><span data-t="tabHist"></span></button>
+  <button data-v="ajustes"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3 M12 19v3 M2 12h3 M19 12h3 M5 5l2 2 M17 17l2 2 M5 19l2-2 M17 7l2-2"/></svg><span data-t="tabAjustes"></span></button>
+</nav>
+<div id="toast" hidden></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="i18n.js?v=3"></script>
+<script src="data/fichas.js?v=3"></script>
+<script src="app.js?v=3"></script>
+</body>
+</html>
