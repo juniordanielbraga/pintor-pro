@@ -297,7 +297,7 @@ function pintarPrecios() {
 }
 pintarPrecios();
 // LatAm: precio en la moneda del país del visitante (el checkout cobra lo mismo por Markets)
-if (PAIS.porPais) fetch("https://ipapi.co/country/").then(r => r.text()).then(cc => { const x = PAIS.porPais[cc.trim()]; if (x) { Object.assign(PAIS, x); pintarPrecios(); } }).catch(() => {});
+if (PAIS.porPais) fetch("https://ipapi.co/country/").then(r => r.text()).then(cc => { const x = PAIS.porPais[cc.trim()]; if (x) { Object.assign(PAIS, x); pintarPrecios(); if (x.U) document.querySelectorAll("img").forEach(i => { i.src = i.src.replace(/(hero|scr)-[A-Z]/, "$1-" + x.U); }); } }).catch(() => {});
 const c1 = document.getElementById("c1"), c2 = document.getElementById("c2");
 c1.href = withUtm(PAIS.c1); c2.href = withUtm(PAIS.c2);
 [c1, c2].forEach(a => a.addEventListener("click", () => { if (window.fbq) fbq("track", "InitiateCheckout"); }));
